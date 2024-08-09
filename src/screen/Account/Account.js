@@ -1,10 +1,10 @@
 import account from './account.css';
 import {Routes, Route, Link} from 'react-router-dom';
-import MyOrders from "../../MyOrders/MyOrders";
-import MyRewards from "../../MyRewards/MyRewards";
-import PersonalDetails from "../../PersonalDetails/PersonalDetails";
-import ChangePassword from "../../Auth/ChangePassword";
-import EmailPreferences from "../../Auth/EmailPreferences";
+import MyOrders from "../../Components/MyOrders/MyOrders";
+import MyRewards from "../../Components/MyRewards/MyRewards";
+import PersonalDetails from "../../Components/PersonalDetails/PersonalDetails";
+import ChangePassword from "../../Components/Auth/ChangePassword";
+import EmailPreferences from "../../Components/Auth/EmailPreferences";
 export default function Account() {
     return (
         <div className="account-main">

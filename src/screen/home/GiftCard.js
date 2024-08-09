@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {addToCart} from "../../../redux/features/cartSlice";
+import {addToCart} from "../../redux/features/cartSlice";
 const GiftCard = ({ card, addToCart,onClick }) => (
     <div className="col-6 col-md-3 col-lg-2 " onClick={onClick}>
         <div className="card h-100 borderless-card">

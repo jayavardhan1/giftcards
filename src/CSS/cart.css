@@ -1,0 +1,145 @@
+.cart-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.5% 3%; /* Use percentage-based padding */
+    gap: 1%; /* Use percentage-based gap */
+}
+
+/* Styles for left and right sections */
+.main-left, .main-right {
+    flex-grow: 1; /* Make left and right sections grow to fill available space */
+    max-width: 70%; /* Limit width to 70% of container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; /* Add padding for spacing */
+}
+
+.main-right {
+    max-width: 30%; /* Limit width to 30% of container */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .main-left, .main-right {
+        max-width: 100%; /* Set max width to 100% on smaller screens */
+    }
+}
+.main-subtitle{
+    color: #1C170D;
+    font-feature-settings: 'dlig' on;
+    font-family: "Work Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 55px /* 125% */;
+    letter-spacing: -0.66px;
+    padding-left: 24px;
+}
+.cart-item {
+    display: flex;
+    width: 100%; /* Set width to 100% to fit within the container */
+    padding: 24px; /* Adjust padding for spacing */
+    justify-content: center; /* Align items to the start */
+    align-items: flex-start; /* Align items vertically */
+    gap: 20px; /* Adjust the gap between items */
+    background: #FFF;
+}
+
+.cart-item img {
+    width: 144px;
+    height: 144px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: lightgray 50% / cover no-repeat;
+}
+
+/* Adjusting cart-item-data width */
+.cart-item-data {
+    flex-grow: 1; /* Allow the cart-item-data to grow to fill available space */
+}
+
+/* cart-item-data child heading */
+.cart-item-data .heading {
+    color: #1C170D;
+    font-family: "Work Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.cart-item-data .text {
+    color: #A1824A;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.add-to-cart{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+.price-cal {
+    width: 100%; /* Set width to 100% to fit within the container */
+    max-width: 800px; /* Limit maximum width for larger screens */
+    padding: 4%; /* Use percentage-based padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for individual price items */
+.price-item {
+    width: 100%; /* Set width to 100% to fill available space */
+    max-width: 90%; /* Limit maximum width for larger screens */
+    padding: 4% 0; /* Use percentage-based padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles for price footer */
+.price-footer {
+    width: 100%; /* Set width to 100% to fill available space */
+    max-width: 800px; /* Limit maximum width for larger screens */
+    padding: 4% 0; /* Use percentage-based padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4%; /* Use percentage-based gap */
+}
+
+/* Styles for buttons */
+.checkout-btn, .countinue-shop-btn {
+    width: 100%; /* Set width to 100% to fill available space */
+    max-width: 90%; /* Limit maximum width for larger screens */
+    padding: 4% 0; /* Use percentage-based padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px; /* Adjust border radius as needed */
+    cursor: pointer;
+}
+.btn-grn{
+    border-radius: 24px;
+    background: #009963;
+    color: #FFF;
+    font-feature-settings: 'dlig' on;
+    font-family: "Work Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px /* 150% */;
+    letter-spacing: 0.42px;
+}
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .price-cal, .price-footer {
+        padding: 6%; /* Increase padding for smaller screens */
+    }
+}

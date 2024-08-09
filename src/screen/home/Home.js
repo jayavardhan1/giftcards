@@ -1,52 +1,20 @@
 import React, {useEffect, useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import './home.css';
 import GiftCard from "./GiftCard";
-import {getBrands, getProducts, getTopProducts, getTrendingProducts} from "../../../service/Api";
-import Trending2 from "../../Trending2/Trending2";
-import Footer from "../../Footer/Footer";
-import QuickLinks from "../../quicksLinks/QuickLinks";
+import {getBrands, getProducts, getTopProducts, getTrendingProducts} from "../../service/Api";
+import Trending2 from "../../Components/Trending2/Trending2";
+import Footer from "../../Components/Footer/Footer";
+import QuickLinks from "../../Components/quicksLinks/QuickLinks";
+import TopQuickLinks from "../../Components/TopQuickLinks";
+import Banner from "../../PortalComponents/Banner";
+import Brands from "../../PortalComponents/Brands";
 
-const Banner = ({ text }) => (
-    <div className="container-fluid p-0">
-        <div className="banner d-flex justify-content-center align-items-center position-relative">
-            <img
-                src="banner1.png"
-                alt="Banner Image"
-                className="img-fluid cropped-image"
-                style={{width: '100%', height: '100%', borderRadius: '0.5rem'}}
-            />
-            <div className="banner-text text-white text-center position-absolute">
-                <h1 className="display-4 fw-bold">{text}</h1>
-            </div>
-        </div>
-    </div>
-);
-const Categories = () => {
-    const [brands, setBrands] = useState([]);
-    const fetchBrands = async () => {
-        const brands =  getBrands();
-        setBrands(await brands);
-    }
-    useEffect(() => {
-        fetchBrands();
-    },[]);
-    return (
-        <div className="container">
-            <div className="row">
-                {brands.map((brand, index) => (
-                    <div key={index} className="col-6 col-md-4 col-lg-3 col-xl-2" >
-                        <div className="category p-2 my-1 text-center">{brand}</div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-}
 
-const SearchBar = ({ color = '#FFFFFF' }) => (
+
+const SearchBar = () => (
     <div className="search-bar-container d-flex align-items-center justify-content-left p-3 rounded-pill" style={{ backgroundColor: 'var(--primary-color)', marginTop: '40px' }}>
-        <svg width="42" height="42" viewBox="0 0 24 24" fill={color} xmlns="http://www.w3.org/2000/svg">
+        <svg width="42" height="42" viewBox="0 0 24 24" fill="var(--secondary-text-color)" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd"
                   d="M21.5306 20.4694L16.8366 15.7762C19.6629 12.383 19.3204 7.36693 16.0591 4.38935C12.7978 1.41176 7.77134 1.526 4.64867 4.64867C1.526 7.77134 1.41176 12.7978 4.38935 16.0591C7.36693 19.3204 12.383 19.6629 15.7762 16.8366L20.4694 21.5306C20.7624 21.8237 21.2376 21.8237 21.5306 21.5306C21.8237 21.2376 21.8237 20.7624 21.5306 20.4694ZM3.75 10.5C3.75 6.77208 6.77208 3.75 10.5 3.75C14.2279 3.75 17.25 6.77208 17.25 10.5C17.25 14.2279 14.2279 17.25 10.5 17.25C6.77379 17.2459 3.75413 14.2262 3.75 10.5Z"/>
         </svg>
@@ -56,23 +24,15 @@ const SearchBar = ({ color = '#FFFFFF' }) => (
 
 
 export default function Home() {
-    const tier = 2;
     const navigate = useNavigate();
-
     const handleProductClick = (id) => {
         navigate(`/product/${id}`);
     };
-    const primaryColor = (tier === 1) ? "#F5F0E6" : "#F2F5F0";
-    const secondaryColor = (tier === 1) ? "#A1824A" : "#708C5E";
     const [specialOffers, setSpecialOffers] = useState([]);
     const [typedText, setTypedText] = useState('');
     const userInput = "Gift cards for everyone on your list";
     const [TopProducts, setTopProducts] = useState([]);
     const [TrendingProducts, setTrendingProducts] = useState([]);
-
-
-    document.documentElement.style.setProperty('--primary-color', primaryColor);
-    document.documentElement.style.setProperty('--secondary-text-color', secondaryColor);
 
     useEffect(() => {
         let index = -1;
@@ -158,8 +118,10 @@ export default function Home() {
     return (
         <div className="main">
             <Banner text={typedText}/>
+            <div className="title-top-gift-cards">Trending</div>
             <Trending2 products={trendingProducts2}/>
-            <SearchBar color={secondaryColor}/>
+            {/*<SearchBar/>*/}
+            {/*<TopQuickLinks/>*/}
             <div className="title-top-gift-cards">Top Gift Cards</div>
             <div className="row">
                 {TrendingProducts.map((card, index) => (
@@ -167,7 +129,7 @@ export default function Home() {
                 ))}
             </div>
             <div className="title-top-gift-cards">Brands</div>
-            <Categories/>
+            <Brands/>
             <div className="title-top-gift-cards">Special offers</div>
             <div className="row">
                 {TopProducts.map((offer, index) => (

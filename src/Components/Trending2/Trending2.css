@@ -1,0 +1,123 @@
+/*!* TrendingScroller.css *!*/
+/*.trending-scroller {*/
+/*    display: flex;*/
+/*    overflow-x: auto; !* Enables horizontal scrolling *!*/
+/*    border-radius: 10px;*/
+/*    padding: 0px ;*/
+/*    gap: 20px;*/
+/*    overflow-y: auto;  !* Allows vertical scrolling *!*/
+/*    scrollbar-width: none;  !* Hides the scrollbar for Firefox *!*/
+/*}*/
+/*.trending-scroller::-webkit-scrollbar {*/
+/*    display: none;  !* Hides the scrollbar for Chrome, Safari and Opera *!*/
+/*}*/
+/*.trending-card {*/
+/*    box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.trending-image {*/
+/*    position: relative;*/
+/*    height: 280px;*/
+/*    width: 100%;*/
+/*}*/
+/*.trending-image img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.discount-label {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    right: 10px;*/
+/*    background-color: red;*/
+/*    color: white;*/
+/*    padding: 5px 10px;*/
+/*    border-radius: 5px;*/
+/*}*/
+/*.trending-info {*/
+/*    padding: 15px;*/
+/*    text-align: center;*/
+/*}*/
+/*.shop-now-btn {*/
+/*    background-color: green;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 10px 20px;*/
+/*    cursor: pointer;*/
+/*    margin-top: 10px;*/
+/*    width: 100%;*/
+/*    border-radius: 18px;*/
+/*}*/
+/* TrendingScroller.css */
+.trending-scroller {
+    display: flex;
+    overflow-x: auto;
+    padding: 0px;
+    gap: 10px;
+    scrollbar-width: none;  /* Hides the scrollbar for Firefox */
+}
+
+.trending-scroller::-webkit-scrollbar {
+    display: none;  /* Hides the scrollbar for Chrome, Safari and Opera */
+}
+
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* This helps push the button to the bottom */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.trending-image {
+    position: relative;
+    height: 280px;
+    width: 100%;
+}
+
+.trending-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discount-label {
+    position: absolute;
+    background-color: red;
+    top: 10px;
+    right: 10px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.trending-info {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Ensures this section expands to fill available space pushing the button down */
+}
+
+.trending-info h3 {
+    height: 60px; /* Set a fixed height for titles */
+}
+
+.trending-info p {
+    height: 80px; /* Set a fixed height for descriptions */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits the number of lines */
+    -webkit-box-orient: vertical;
+}
+
+.shop-now-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 18px;
+}

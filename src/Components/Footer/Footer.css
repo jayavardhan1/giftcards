@@ -1,0 +1,51 @@
+/* Footer.css */
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 20px); /* Adjust width for 2 items per row minus margin */
+    border-radius: 10px;
+    min-height: 150px;
+}
+@media (min-width: 600px) { /* Adjust breakpoint as needed */
+    .link-container {
+        width: calc(33.333% - 20px); /* 3 items per row minus margin for tablets and larger devices */
+    }
+}
+
+@media (min-width: 992px) { /* Adjust breakpoint as needed */
+    .link-container {
+        width: calc(25% - 20px); /* 4 items per row minus margin for desktops and larger devices */
+    }
+}
+.link-icon {
+    /* Assuming SVG needs certain styling */
+    margin-bottom: 10px;
+}
+
+.link-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.link-description {
+    font-size: 0.875rem;
+    color: var(--secondary-text-color);
+}
+/* Additional styles for the lower part of the footer */
+.footer-lower-section{
+    margin-top: 20px;
+    padding-left: 10px;
+}
+.footer-row{
+    border-top: 1px solid rgba(229, 232, 235, 1);
+    padding: 20px 0;
+}
+.footer-lower-title{
+    color: var(--secondary-text-color);
+}

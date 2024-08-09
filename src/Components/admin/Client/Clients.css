@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Mulish",Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+nav ul li {
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.actions input {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+.actions button {
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button {
+    background-color: #007bff;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions input, .actions button {
+        margin: 5px 0;
+    }
+}

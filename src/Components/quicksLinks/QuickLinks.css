@@ -1,0 +1,65 @@
+
+@keyframes dropAndBounce {
+    0%, 2% {
+        top: 20px;  /* Start from the top */
+        opacity: 0;
+    }
+    5%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 92%, 94%, 96%, 98%, 100% {
+        opacity: 1;
+        /* These are incremental stops for each bounce. */
+        /* Values would be calculated to gradually decrease in height. */
+    }
+    100% {
+        top: calc(100vh - 80px); /* Final resting position */
+        opacity: 1;
+    }
+}
+.quick-links-container {
+    position: fixed;
+    right: 20px;
+    z-index: 1000;
+    animation: dropAndBounce 3s forwards; /* Use forwards to maintain the final state post-animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the child elements */
+
+}
+
+.quick-link-toggle {
+
+    width: 60px;
+    height: 60px;
+    background-color: #007bff; /* Primary color */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 60px;  /* Adjust based on the desired size */
+    height: 60px; /* Ensure it's square for the circle to work */
+    overflow: hidden;
+    padding: 0px;
+}
+
+.quick-link-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%; /* Makes the image circular */
+}

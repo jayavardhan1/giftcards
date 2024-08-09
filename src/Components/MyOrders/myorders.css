@@ -1,0 +1,57 @@
+.myorders-header {
+    color: #1C170D;
+    font-feature-settings: 'dlig' on;
+    font-family: "Plus Jakarta Sans";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px /* 125% */;
+    letter-spacing: -1.6px;
+}
+.order-card{
+    display: flex;
+    width: 100%;
+    padding: 0px 32.344px 12px 0px;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFF;
+}
+.order-image{
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    border-radius: 16px;
+}
+.order-left{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.order-id{
+    color: #1C170D;
+    font-feature-settings: 'dlig' on;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px /* 150% */;
+}
+.order-date{
+    color: var(--secondary-text-color);
+    font-feature-settings: 'dlig' on;
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px /* 150% */;
+}
+.order-price{
+    align-self: stretch;
+    color: #1C170D;
+    font-feature-settings: 'dlig' on;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px /* 150% */;
+}

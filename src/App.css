@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+.card:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-insideProductList:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MuiToolbar-root .MuiToolbar-gutters .MuiToolbar-regular .css-hyum1k-MuiToolbar-root{
+    display: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+td>div>svg{
+    color:#0d6efd;
 }
-
-.App-link {
-  color: #61dafb;
+.css-10wovnu-MuiTypography-root{
+    color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.css-cveggr-MuiListItemIcon-root{
+    color: white !important;
+}
+.css-h3gcy3-MuiDrawer-docked .MuiDrawer-paper {
+    background-color:#17153B;
+    border:none
+}
+#profileImg{
+    background-image: url("https://cdn.usegalileo.ai/stability/935155ac-4baa-402a-98ba-9cdabc45a1e0.png");
+}
+.css-hyum1k-MuiToolbar-root{
+    height: 0;
+}
+@media (min-width: 600px) {
+    .css-hyum1k-MuiToolbar-root {
+        min-height:0;
+    }
 }
