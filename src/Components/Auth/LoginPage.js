@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
-import {login} from "../../service/AuthAPi";
-import {setError} from "../../redux/features/userSlice"; // Make sure to create and style this CSS file
-
+import { loginUser } from '../../service/RealApi';
 const LoginPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
 
     const handleLogin = async (event) => {
+        console.log('Logging in with:', username, password, rememberMe);
         event.preventDefault();
         try {
-            const user = await login(username, password);
+            const user = await loginUser(username, password);
             console.log('Logged in user:', user);
-            // Handle successful login (e.g., save user info, redirect, etc.)
         } catch (error) {
-            setError(error.message);
+            console.error('Error during login:', error);
         }
+        console.log('Login complete');
     };
 
     return (
